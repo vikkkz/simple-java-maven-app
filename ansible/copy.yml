@@ -1,0 +1,11 @@
+---
+- name: Copy File Playbook
+  hosts: your_target_hosts
+  become: true
+
+  tasks:
+    - name: Copy file
+      copy:
+        src: /home/ec2-user/ansible/copy.yml
+        dest: /home/ec2-user
+        mode: '0644'
